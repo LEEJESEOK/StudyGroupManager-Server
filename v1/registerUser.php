@@ -13,9 +13,9 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 		$db = new DBOperations();
 
 		$result = $db->createUser(
-			$_POST['username'],
-			$_POST['password'],
 			$_POST['email'],
+			$_POST['password'],
+			$_POST['username'],
 			$_POST['phone']
 			);
 		if($result == 1) {
